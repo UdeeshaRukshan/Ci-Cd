@@ -11,14 +11,12 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
-      env:
-        NODE_OPTIONS: --node20  # Specify Node.js version 20 for actions
+      uses: actions/checkout@v3
 
     - name: Setup Node version
       uses: actions/setup-node@v4
       with:
-        node-version: '18.x'
+        node-version: '18.x'  # Keep using Node.js 18 if it's required
 
     - name: Install dependencies
       run: npm install
